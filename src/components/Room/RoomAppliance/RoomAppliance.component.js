@@ -1,6 +1,7 @@
 import React from "react";
 import { AppState } from "../../../context/GlobalState";
 import { ROOMData } from "../../../Data/ROOM";
+import DeviceCard from "../../Device/DeviceCard/DeviceCard.component";
 import SmallDeviceCard from "../../Device/SmallDeviceCard/SmallDeviceCard.component";
 import "./RoomAppliance.style.css";
 
@@ -17,12 +18,13 @@ const RoomAppliance = () => {
             >
               {roomName?.appliance.map((item, index) => {
                 return (
-                  <SmallDeviceCard
+                  <DeviceCard
                     key={`room-appliance-small-card-${index}`}
-                    type={item.name}
                     status={item.status}
+                    name={item.name}
+                    companyName={item.brand}
+                    imageLink={item.image}
                   />
-                  //   <p>{JSON.stringify(item)}</p>
                 );
               })}
             </div>

@@ -1,0 +1,10 @@
+.room-appliance {
+  width: 100%;
+}
+.room-appliance-cluster {
+  padding: 20px 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  grid-gap: 10px;
+}

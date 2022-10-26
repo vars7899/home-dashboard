@@ -4,6 +4,12 @@
 .xl-text {
   font-size: 1.5rem;
 }
+.lg-text {
+  font-size: 1.1rem;
+}
+.sm-text {
+  font-size: 0.8rem;
+}
 .bold {
   font-weight: 500;
 }
