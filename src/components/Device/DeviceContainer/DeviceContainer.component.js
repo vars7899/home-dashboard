@@ -2,14 +2,15 @@ import React from "react";
 import IconButton from "../../Button/IconButton/IconButton.component";
 import { IoAdd, IoGrid } from "react-icons/io5";
 import { accent1, accent2Light1 } from "../../../styles/ColorScheme";
-import "./DeviceContainer.style.css";
 import RoomHeader from "../../Room/RoomHeader/RoomHeader.component";
+import "./DeviceContainer.style.css";
+import RoomAppliance from "../../Room/RoomAppliance/RoomAppliance.component";
 
 const DeviceContainer = () => {
   return (
     <div className="device-container">
       <div className="device-container-header">
-        <p className="device-container-name xl-text bold text-accent2">
+        <p className="device-container-name xxl-text bold text-accent2">
           Devices
         </p>
         <div className="device-container-function">
@@ -21,8 +22,11 @@ const DeviceContainer = () => {
           </IconButton>
         </div>
       </div>
-      <div className="device-container-zones-header">
-        <RoomHeader />
+      <div className="device-container-zones">
+        <div className="device-container-zones-header">
+          <RoomHeader />
+        </div>
+        <RoomAppliance />
       </div>
     </div>
   );

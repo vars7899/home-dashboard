@@ -1,0 +1,21 @@
+.room-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.room-header-room-name-container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff00;
+  cursor: pointer;
+  user-select: none;
+  transition: linear 500ms;
+}
+.room-header-room-name-container-icon {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
