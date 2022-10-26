@@ -1,0 +1,62 @@
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 140px;
+  padding: 10px 0px;
+}
+.total-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.total-type-dot {
+  height: 8px;
+  width: 8px;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.total-type-name {
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.total-number {
+  text-align: center;
+}
+.total-number > p {
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: 5px 0px;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+.total-stat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.total-stat-min,
+.total-stat-max {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #f0f0f050;
+  padding: 0px 5px 0px 0px;
+}
+.red {
+  color: red;
+  margin-left: 5px;
+}
+.green {
+  color: green;
+  margin-left: 5px;
+}
+.primary {
+  background-color: #988fe3;
+}
+.secondary {
+  background-color: #f0ce87;
+}

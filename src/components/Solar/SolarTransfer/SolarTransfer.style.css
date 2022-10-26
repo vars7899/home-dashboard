@@ -1,0 +1,57 @@
+.transfer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.solar-transfer {
+  position: relative;
+  /* background-color: #f0f0f0; */
+  border-radius: 10px 0px 0px 10px;
+  width: 600px;
+  height: 400px;
+  margin-top: -70px;
+  margin-left: 30px;
+}
+.solar-diagram,
+.inverter-diagram,
+.battery-diagram,
+.grid-diagram,
+.home-diagram {
+  /* height: 100px;
+  width: 100px; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* user-select: none; */
+}
+.solar-diagram {
+  position: absolute;
+  left: -12%;
+  top: 20%;
+  transform: translate(50%, -50%);
+}
+.inverter-diagram {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.battery-diagram {
+  position: absolute;
+  left: -12%;
+  bottom: 20%;
+  transform: translate(50%, 50%);
+}
+.grid-diagram {
+  position: absolute;
+  right: -10%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.home-diagram {
+  position: absolute;
+  right: -10%;
+  bottom: 20%;
+  transform: translate(-50%, 50%);
+}

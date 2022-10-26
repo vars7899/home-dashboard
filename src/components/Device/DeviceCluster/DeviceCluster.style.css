@@ -1,0 +1,28 @@
+.cluster {
+  /* max-width: 550px; */
+  display: grid;
+  grid-gap: 10px;
+  /* align-items: start; */
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+/* add device card */
+.add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 180px; */
+  background-color: #22252d;
+  border-radius: 10px;
+  padding: 30px 30px;
+  color: #f0f0f050;
+  font-size: 0.8rem;
+  /* max-height: 140px; */
+}
+.add-logo-text {
+  padding: 5px 0px;
+}

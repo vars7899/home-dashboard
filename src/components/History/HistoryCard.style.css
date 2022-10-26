@@ -1,0 +1,32 @@
+.history-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #f0f0f050;
+  padding: 10px 10px;
+}
+.history-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.history-card-device {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+.history-card-date {
+  font-size: 0.8rem;
+}
+.history-card-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.device-status {
+  color: #f0ce87;
+}
