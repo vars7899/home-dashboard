@@ -1,3 +1,8 @@
+.room-appliance-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .room-appliance {
   width: 100%;
 }
@@ -5,6 +10,11 @@
   padding: 20px 0px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
   grid-gap: 10px;
+}
+.air-condition-container {
+  padding: 20px 0px;
+  margin-right: 10px;
 }

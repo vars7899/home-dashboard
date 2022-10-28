@@ -1,0 +1,102 @@
+.acc-container {
+  display: grid;
+  height: 100%;
+}
+.acc-container-left {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100%;
+  padding: 42.5px 0px;
+}
+.acc-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.acc-input > * {
+  width: 50px;
+}
+.acc-temp {
+  position: relative;
+  height: 320px;
+  user-select: none;
+}
+.acc-temp-circle {
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.acc-temp-inner-circle {
+  height: 310px;
+  width: 310px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+}
+.acc-temp-inner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 6rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  line-height: 2rem;
+}
+.acc-temp-marker-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 17;
+}
+.temp-right-side {
+  display: grid;
+  height: 190%;
+  grid-template-rows: repeat(2, 1fr);
+  line-height: 4.1rem;
+}
+.after-decimal {
+  margin-bottom: -100px;
+}
+.marker-mark {
+  width: 2px;
+  height: 30px;
+}
+.marker-mark:first-child,
+.marker-mark:last-child {
+  background-blend-mode: difference !important;
+  height: 65px !important;
+}
+.marker-mark:nth-child(5n) {
+  height: 40px;
+}
+.acc-temp-blend {
+  height: 310px;
+  width: 310px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 16;
+  /* background-color: rebeccapurple; */
+  /* backdrop-filter: invert(100%); */
+}
+.acc-container-right {
+  width: 100%;
+}
+.acc-mode-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  grid-template-rows: auto;
+}
