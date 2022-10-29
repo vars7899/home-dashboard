@@ -10,6 +10,7 @@ import Humidity from "./Humidity/Humidity.component";
 import FanFunction from "./FanFunction/FanFunction.component";
 import HumidityFunction from "./HumidityFunction/HumidityFunction.component";
 import "./AirCondition.style.css";
+import TimerFunction from "./TimerFunction/TimerFunction.component";
 
 const AirConditioner = () => {
   const { acControls, setAcControls } = AppState();
@@ -58,6 +59,7 @@ const AirConditioner = () => {
       <div className="air-condition-function">
         <FanFunction />
         <HumidityFunction />
+        <TimerFunction />
       </div>
       <div style={style["ac-container-body"]}>
         <AirConditionerControl />

@@ -1,4 +1,4 @@
-.humidity-function {
+.timer-function {
   display: grid;
   grid-template-columns: minmax(auto, 65px) auto;
   grid-template-rows: 65px auto;
@@ -8,7 +8,7 @@
   border-radius: 10px;
   padding: 15px;
 }
-.humidity-function-speed {
+.timer-function-speed {
   height: 45px;
   width: 100%;
   display: flex;
@@ -17,30 +17,30 @@
   border-radius: 5px;
   margin: 0px 10px;
 }
-.humidity-function-right,
-.humidity-function-left {
+.timer-function-right,
+.timer-function-left {
   height: 100%;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: space-between;
 }
-.humidity-function-left-icon {
+.timer-function-left-icon {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
 }
-.humidity-function-left-text {
+.timer-function-left-text {
   display: flex;
   align-items: center;
 }
-.humidity-function-right-text {
+.timer-function-right-text {
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-.humidity-function-right-text > p {
+.timer-function-right-text > p {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -48,18 +48,18 @@
   line-height: 3rem;
   margin-left: 10px;
 }
-.humidity-function-right-text > span {
+.timer-function-right-text > span {
   font-size: 0.6rem;
   height: 100%;
   /* margin: 0px 2px 10px 2px; */
 }
-.humidity-function-right-function {
+.timer-function-right-function {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4px;
 }
-.humidity-function-right-function > div {
+.timer-function-right-function > div {
   display: flex;
   align-items: center;
   justify-content: center;

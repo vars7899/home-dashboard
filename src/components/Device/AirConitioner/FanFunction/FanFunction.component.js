@@ -53,7 +53,6 @@ const FanFunction = () => {
         return;
     }
   }
-  console.log(fanSpeed);
 
   return (
     <div
