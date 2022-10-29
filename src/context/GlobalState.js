@@ -7,8 +7,8 @@ export const AppContextProvider = ({ children }) => {
   const [roomList, setRoomList] = useState(ROOMData);
   const [selectedZone, setSelectedZone] = useState(1);
   const [acControls, setAcControls] = useState({
-    fan: false,
-    fanSpeed: 5,
+    fan: true,
+    fanSpeed: 7,
     moister: false,
     moisterLevel: 36,
     temperature: 20,

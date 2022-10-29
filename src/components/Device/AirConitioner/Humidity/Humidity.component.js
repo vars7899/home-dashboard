@@ -34,7 +34,7 @@ const Humidity = () => {
 
   return (
     <div className="humidity">
-      <div className="humidity-bars">
+      {/* <div className="humidity-bars">
         <div
           className="hb hb-bar1"
           style={{
@@ -65,7 +65,7 @@ const Humidity = () => {
             background: fanOperation && fanSpeed >= 5 ? accent1 : dark1,
           }}
         ></div>
-      </div>
+      </div> */}
       <motion.div
         className="ac-container-header-control-box"
         onClick={() =>

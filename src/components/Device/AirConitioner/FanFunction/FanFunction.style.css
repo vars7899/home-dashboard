@@ -1,11 +1,11 @@
 .fan-function {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2fr 1fr;
-  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 2px;
   align-items: center;
   justify-content: space-between;
-  /* width: 170px; */
+  width: 210px;
   border-radius: 10px;
   padding: 15px;
 }
@@ -45,30 +45,46 @@
 }
 .humidity-bars {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr;
-  height: 45px;
+  height: 55px;
   grid-gap: 5px;
   align-items: end;
 }
 .hb {
+  height: 100%;
   background-color: red;
   width: 5px;
   border-radius: 5px;
 }
 .hb-bar1 {
-  height: 20%;
+  height: 10%;
 }
 .hb-bar2 {
-  height: 40%;
+  height: 20%;
 }
 .hb-bar3 {
-  height: 60%;
+  height: 30%;
 }
 .hb-bar4 {
-  height: 80%;
+  height: 40%;
 }
 .hb-bar5 {
+  height: 50%;
+}
+.hb-bar6 {
+  height: 60%;
+}
+.hb-bar7 {
+  height: 70%;
+}
+.hb-bar8 {
+  height: 80%;
+}
+.hb-bar9 {
+  height: 90%;
+}
+.hb-bar10 {
   height: 100%;
 }
 .fan-function-right-function {

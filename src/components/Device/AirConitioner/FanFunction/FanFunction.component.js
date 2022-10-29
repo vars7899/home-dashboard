@@ -5,6 +5,7 @@ import {
   accent2,
   accent2Light2,
   accent1,
+  dark2,
 } from "../../../../styles/ColorScheme";
 import {
   MdOutlineArrowBackIos,
@@ -22,23 +23,37 @@ const FanFunction = () => {
 
   // Function --> to update the fan speed of the air conditioner
   function alterFanSpeed(direction) {
+    if (!fanOperation) {
+      setAcControls((controls) => ({
+        ...controls,
+        fan: true,
+      }));
+    }
     switch (direction) {
       case "up":
-        setAcControls((controls) => ({
+        if (fanSpeed === 10) return;
+        return setAcControls((controls) => ({
           ...controls,
           fanSpeed: controls.fanSpeed++,
         }));
-        break;
       case "down":
-        setAcControls((controls) => ({
+        if (fanSpeed === 0) return;
+        if (fanSpeed === 1) {
+          return setAcControls((controls) => ({
+            ...controls,
+            fan: false,
+            fanSpeed: controls.fanSpeed--,
+          }));
+        }
+        return setAcControls((controls) => ({
           ...controls,
           fanSpeed: controls.fanSpeed--,
         }));
-        break;
       default:
         return;
     }
   }
+  console.log(fanSpeed);
 
   return (
     <div
@@ -47,9 +62,21 @@ const FanFunction = () => {
         backgroundColor: dark1,
       }}
     >
-      <div className="fan-function-left-icon">
-        <IconButton backgroundColor={acControls.fan ? accent1 : dark1}>
-          <GiComputerFan size={35} color={accent2} />
+      <div
+        className="fan-function-left-icon"
+        onClick={() =>
+          setAcControls((control) => ({
+            ...control,
+            fan: !control.fan,
+          }))
+        }
+        whileTap={{ scale: 0.95 }}
+      >
+        <IconButton backgroundColor={acControls.fan ? accent2 : dark2}>
+          <GiComputerFan
+            size={35}
+            color={acControls.fan ? dark1 : accent2Light2}
+          />
         </IconButton>
       </div>
 
@@ -58,31 +85,61 @@ const FanFunction = () => {
           <div
             className="hb hb-bar1"
             style={{
-              background: fanOperation && fanSpeed >= 1 ? accent1 : dark1,
+              background: fanOperation && fanSpeed >= 1 ? accent2 : dark2,
             }}
           ></div>
           <div
             className="hb hb-bar2"
             style={{
-              background: fanOperation && fanSpeed >= 2 ? accent1 : dark1,
+              background: fanOperation && fanSpeed >= 2 ? accent2 : dark2,
             }}
           ></div>
           <div
             className="hb hb-bar3"
             style={{
-              background: fanOperation && fanSpeed >= 3 ? accent1 : dark1,
+              background: fanOperation && fanSpeed >= 3 ? accent2 : dark2,
             }}
           ></div>
           <div
             className="hb hb-bar4"
             style={{
-              background: fanOperation && fanSpeed >= 4 ? accent1 : dark1,
+              background: fanOperation && fanSpeed >= 4 ? accent2 : dark2,
             }}
           ></div>
           <div
             className="hb hb-bar5"
             style={{
-              background: fanOperation && fanSpeed >= 5 ? accent1 : dark1,
+              background: fanOperation && fanSpeed >= 5 ? accent2 : dark2,
+            }}
+          ></div>
+          <div
+            className="hb hb-bar6"
+            style={{
+              background: fanOperation && fanSpeed >= 6 ? accent2 : dark2,
+            }}
+          ></div>
+          <div
+            className="hb hb-bar7"
+            style={{
+              background: fanOperation && fanSpeed >= 7 ? accent2 : dark2,
+            }}
+          ></div>
+          <div
+            className="hb hb-bar8"
+            style={{
+              background: fanOperation && fanSpeed >= 8 ? accent2 : dark2,
+            }}
+          ></div>
+          <div
+            className="hb hb-bar9"
+            style={{
+              background: fanOperation && fanSpeed >= 9 ? accent2 : dark2,
+            }}
+          ></div>
+          <div
+            className="hb hb-bar10"
+            style={{
+              background: fanOperation && fanSpeed >= 10 ? accent2 : dark2,
             }}
           ></div>
         </div>
@@ -93,18 +150,18 @@ const FanFunction = () => {
           color: accent2Light2,
         }}
       >
-        Fan Speed
+        <p>Fan Speed</p>
       </div>
       <div className="fan-function-right-function">
         <motion.div
-          style={{ backgroundColor: accent2Light2 }}
+          style={{ backgroundColor: dark2 }}
           onClick={() => alterFanSpeed("down")}
           whileTap={{ scale: 0.95, backgroundColor: accent1 }}
         >
           <MdOutlineArrowBackIos size={15} color={accent2} />
         </motion.div>
         <motion.div
-          style={{ backgroundColor: accent2Light2 }}
+          style={{ backgroundColor: dark2 }}
           onClick={() => alterFanSpeed("up")}
           whileTap={{ scale: 0.95, backgroundColor: accent1 }}
         >
