@@ -1,10 +1,9 @@
 .fan-function {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: minmax(auto, 65px) auto;
+  grid-template-rows: 65px auto;
   grid-column-gap: 10px;
   grid-row-gap: 2px;
-  align-items: center;
-  justify-content: space-between;
   width: 210px;
   border-radius: 10px;
   padding: 15px;
@@ -23,7 +22,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-between;
 }
 .fan-function-left-icon {
@@ -34,7 +32,7 @@
 }
 .fan-function-left-text {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .fan-function-right-text {
   display: flex;
