@@ -14,7 +14,7 @@ const IconTextButton = ({
       style={{
         background: givenBackground,
         color: textColor,
-        padding: "20px",
+        padding: "15px",
         borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
@@ -31,7 +31,7 @@ const IconTextButton = ({
       }}
     >
       <div className="ic-btn-text">{children}</div>
-      <div className="ic-btn-icon lg-text">{givenText}</div>
+      <div className="ic-btn-icon sm-text">{givenText}</div>
     </motion.div>
   );
 };

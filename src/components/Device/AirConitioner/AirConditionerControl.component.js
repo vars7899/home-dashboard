@@ -1,7 +1,6 @@
 import React from "react";
 import { AppState } from "../../../context/GlobalState";
 import {
-  accent1,
   accent1H,
   accent1L,
   accent1S,
@@ -10,14 +9,7 @@ import {
 } from "../../../styles/ColorScheme";
 import IconButton from "../../Button/IconButton/IconButton.component";
 import { RiAddLine, RiSubtractLine } from "react-icons/ri";
-import IconTextButton from "../../Button/IconTextButton/IconTextButton.component";
-import { TbWind } from "react-icons/tb";
-import { MdOutlineThermostatAuto } from "react-icons/md";
-import { FaRegSnowflake } from "react-icons/fa";
-import { GiHeatHaze } from "react-icons/gi";
-import { AnimatePresence, motion } from "framer-motion";
 import "./AirConditionerControl.style.css";
-import { alterScale } from "../../../animations/Variance.animation";
 
 // Component --> Marker Point on the Circular control
 const MarkerMark = () => {
@@ -39,7 +31,7 @@ const MarkerMark = () => {
             position: "absolute",
             left: "50%",
             transform: `rotate(${index * 5}deg)`,
-            transformOrigin: "0px 160px",
+            transformOrigin: "0px 145px",
             background: `hsl(${
               accent1H - acControls.temperature * 7
             },${accent1S}%,${accent1L}%)`,
@@ -72,13 +64,7 @@ const AirConditionerControl = () => {
       }));
     }
   }
-  // Function to update the climate control mode
-  function updateAcMode(event) {
-    setAcControls((controls) => ({
-      ...controls,
-      mode: event,
-    }));
-  }
+
   return (
     <div className="acc-container">
       <div className="acc-container-left">
@@ -99,8 +85,12 @@ const AirConditionerControl = () => {
           <div
             className="acc-temp-inner-circle"
             style={{
-              background: `url("https://res.cloudinary.com/dfcaehp0b/image/upload/v1666853510/image_processing20200727-22888-jqd2xw_mkfay2.gif")`,
-              backgroundPosition: "center",
+              background: `url("https://res.cloudinary.com/dfcaehp0b/image/upload/v1667080182/887acca2ca2b132ec07f8c5f565cf1ae_tra6jx.gif")`,
+              // `url("https://res.cloudinary.com/dfcaehp0b/image/upload/v1667080182/887acca2ca2b132ec07f8c5f565cf1ae_tra6jx.gif")`
+              backgroundPosition: "center center",
+              height: "98%",
+              width: "98%",
+              backgroundSize: "cover",
             }}
           ></div>
           <div
@@ -130,58 +120,6 @@ const AirConditionerControl = () => {
           <IconButton backgroundColor={dark1} onClick={handleTempDecrement}>
             <RiSubtractLine size={25} color={accent2} />
           </IconButton>
-        </div>
-      </div>
-      <div className="acc-container-right">
-        <div className="acc-mode-types">
-          <div onClick={() => updateAcMode(1)}>
-            <IconTextButton
-              givenText={"Dry"}
-              givenBackground={acControls.mode === 1 ? accent1 : dark1}
-              textColor={acControls.mode === 1 ? dark1 : accent2}
-            >
-              <TbWind
-                size={25}
-                color={acControls.mode === 1 ? dark1 : accent2}
-              />
-            </IconTextButton>
-          </div>
-          <div onClick={() => updateAcMode(2)}>
-            <IconTextButton
-              givenText={"Auto"}
-              givenBackground={acControls.mode === 2 ? accent1 : dark1}
-              textColor={acControls.mode === 2 ? dark1 : accent2}
-            >
-              <MdOutlineThermostatAuto
-                size={25}
-                color={acControls.mode === 2 ? dark1 : accent2}
-              />
-            </IconTextButton>
-          </div>
-          <div onClick={() => updateAcMode(3)}>
-            <IconTextButton
-              givenText={"Cool"}
-              givenBackground={acControls.mode === 3 ? accent1 : dark1}
-              textColor={acControls.mode === 3 ? dark1 : accent2}
-            >
-              <FaRegSnowflake
-                size={25}
-                color={acControls.mode === 3 ? dark1 : accent2}
-              />
-            </IconTextButton>
-          </div>
-          <div onClick={() => updateAcMode(4)}>
-            <IconTextButton
-              givenText={"Heat"}
-              givenBackground={acControls.mode === 4 ? accent1 : dark1}
-              textColor={acControls.mode === 4 ? dark1 : accent2}
-            >
-              <GiHeatHaze
-                size={25}
-                color={acControls.mode === 4 ? dark1 : accent2}
-              />
-            </IconTextButton>
-          </div>
         </div>
       </div>
     </div>

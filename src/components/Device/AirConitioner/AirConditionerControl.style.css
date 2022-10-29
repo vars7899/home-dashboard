@@ -1,12 +1,11 @@
 .acc-container {
-  display: grid;
-  height: 100%;
+  /* display: grid; */
+  /* height: 100%; */
 }
 .acc-container-left {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  height: 100%;
-  padding: 42.5px 0px;
+  grid-template-columns: 1fr 290px 1fr;
+  grid-template-rows: 290px;
 }
 .acc-input {
   display: flex;
@@ -18,12 +17,12 @@
 }
 .acc-temp {
   position: relative;
-  height: 320px;
+  /* height: 320px; */
   user-select: none;
 }
 .acc-temp-circle {
-  height: 320px;
-  width: 320px;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -32,8 +31,8 @@
   z-index: 10;
 }
 .acc-temp-inner-circle {
-  height: 310px;
-  width: 310px;
+  height: 98%;
+  width: 98%;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -60,7 +59,7 @@
 }
 .temp-right-side {
   display: grid;
-  height: 190%;
+  /* height: 190%; */
   grid-template-rows: repeat(2, 1fr);
   line-height: 4.1rem;
 }
@@ -68,35 +67,25 @@
   margin-bottom: -100px;
 }
 .marker-mark {
-  width: 2px;
-  height: 30px;
+  width: 6px;
+  height: 3%;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 .marker-mark:first-child,
 .marker-mark:last-child {
   background-blend-mode: difference !important;
-  height: 65px !important;
+  height: 10% !important;
 }
 .marker-mark:nth-child(5n) {
-  height: 40px;
+  height: 6%;
 }
 .acc-temp-blend {
-  height: 310px;
-  width: 310px;
+  height: 70%;
+  width: 70%;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 16;
-  /* background-color: rebeccapurple; */
-  /* backdrop-filter: invert(100%); */
-}
-.acc-container-right {
-  width: 100%;
-}
-.acc-mode-types {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 10px;
-  grid-template-rows: auto;
 }

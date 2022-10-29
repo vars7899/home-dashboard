@@ -13,6 +13,7 @@ export const AppContextProvider = ({ children }) => {
     moisterLevel: 67,
     timer: false,
     timerTime: 6,
+    swing: true,
     temperature: 20,
     tempUpperLimit: 35,
     tempLowerLimit: 10,

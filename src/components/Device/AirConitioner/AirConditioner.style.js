@@ -1,21 +1,21 @@
 import { accent2, dark2 } from "../../../styles/ColorScheme";
 
 export const style = {
-  "ac-container": {
-    background: dark2,
-    borderRadius: "20px",
-    padding: "20px",
-    width: "100%",
-  },
-  "ac-container-header": {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  "ac-container-header-name": {
-    textTransform: "uppercase",
-    color: accent2,
-  },
+  // "ac-container": {
+  //   background: dark2,
+  //   borderRadius: "20px",
+  //   padding: "20px",
+  //   width: "100%",
+  // },
+  // "ac-container-header": {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "space-between",
+  // },
+  // "ac-container-header-name": {
+  //   textTransform: "uppercase",
+  //   color: accent2,
+  // },
   "ac-container-header-control": {
     display: "flex",
     alignItems: "center",

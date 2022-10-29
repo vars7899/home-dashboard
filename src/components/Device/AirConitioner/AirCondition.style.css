@@ -1,6 +1,28 @@
+.ac-container {
+  /* height: 100%; */
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.ac-container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ac-container-header-name {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
 .air-condition-function {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  justify-items: center;
+  justify-items: stretch;
+}
+.ac-container-body {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
 }
