@@ -1,0 +1,61 @@
+.humidity-function {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.humidity-function-speed {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+.humidity-function-right,
+.humidity-function-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.humidity-function-left-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.humidity-function-left-text {
+  display: flex;
+  align-items: flex-end;
+}
+.humidity-function-right-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 0px;
+  line-height: 1.25rem;
+}
+.humidity-function-right-text > span {
+  font-size: 0.6rem;
+  height: 100%;
+  margin: 0px 2px 10px 2px;
+}
+.humidity-function-right-function {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+}
+.humidity-function-right-function > div {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 2px;
+}

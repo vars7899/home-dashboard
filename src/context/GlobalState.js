@@ -10,6 +10,7 @@ export const AppContextProvider = ({ children }) => {
     fan: false,
     fanSpeed: 5,
     moister: false,
+    moisterLevel: 36,
     temperature: 20,
     tempUpperLimit: 35,
     tempLowerLimit: 10,

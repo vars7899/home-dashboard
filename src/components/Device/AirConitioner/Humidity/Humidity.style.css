@@ -5,8 +5,8 @@
   width: 100%;
   padding: 0px 10px;
 }
-.humidity-bars {
-  display: grid;
+/* .humidity-bars { */
+/* display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   height: 40px;
@@ -34,4 +34,4 @@
 }
 .hb-bar5 {
   height: 100%;
-}
+} */
