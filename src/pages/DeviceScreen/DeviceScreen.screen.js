@@ -1,6 +1,5 @@
 import React from "react";
 import DeviceContainer from "../../components/Device/DeviceContainer/DeviceContainer.component";
-import Header from "../../components/Header/Header.component";
 import Sidebar from "../../components/Sidebar/Sidebar.component";
 import "./DeviceScreen.style.css";
 

@@ -1,7 +1,3 @@
-.acc-container {
-  /* display: grid; */
-  /* height: 100%; */
-}
 .acc-container-left {
   display: grid;
   grid-template-columns: 1fr 290px 1fr;

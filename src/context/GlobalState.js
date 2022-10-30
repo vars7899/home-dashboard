@@ -20,6 +20,20 @@ export const AppContextProvider = ({ children }) => {
     tempStep: 0.5,
     mode: 2,
   });
+  const [ambientLight, setAmbientLight] = useState(false);
+  const [userColorPalette, setUserColorPalette] = useState([
+    "#FFCF99",
+    "#2EC4B6",
+    "#E71D36",
+    "#011627",
+    "#FF9F1C",
+  ]);
+  const [colorWheel, setColorWheel] = useState({
+    hue: 90,
+    saturation: 100,
+    luminosity: 50,
+    alpha: 1,
+  });
 
   return (
     <AppContext.Provider
@@ -30,6 +44,12 @@ export const AppContextProvider = ({ children }) => {
         setSelectedZone,
         acControls,
         setAcControls,
+        ambientLight,
+        setAmbientLight,
+        userColorPalette,
+        setUserColorPalette,
+        colorWheel,
+        setColorWheel,
       }}
     >
       {children}
