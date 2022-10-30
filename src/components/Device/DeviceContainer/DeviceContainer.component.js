@@ -3,6 +3,7 @@ import IconButton from "../../Button/IconButton/IconButton.component";
 import { IoAdd, IoGrid } from "react-icons/io5";
 import { accent1, accent2Light1 } from "../../../styles/ColorScheme";
 import RoomHeader from "../../Room/RoomHeader/RoomHeader.component";
+import { motion } from "framer-motion";
 import "./DeviceContainer.style.css";
 import RoomAppliance from "../../Room/RoomAppliance/RoomAppliance.component";
 
@@ -22,12 +23,12 @@ const DeviceContainer = () => {
           </IconButton>
         </div>
       </div>
-      <div className="device-container-zones">
+      <motion.div layout className="device-container-zones">
         <div className="device-container-zones-header">
           <RoomHeader />
         </div>
         <RoomAppliance />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { AppState } from "../../../context/GlobalState";
 import { ROOMData } from "../../../Data/ROOM";
 import AirConditioner from "../../Device/AirConitioner/AirConditoner.component";
 import DeviceCard from "../../Device/DeviceCard/DeviceCard.component";
-import SmallDeviceCard from "../../Device/SmallDeviceCard/SmallDeviceCard.component";
+import { motion } from "framer-motion";
 import LightSettingPanel from "../../Lights/LightSettingPanel/LightSettingPanel.component";
 import "./RoomAppliance.style.css";
 
@@ -11,9 +11,14 @@ const RoomAppliance = () => {
   const { selectedZone } = AppState();
   return (
     <div className="room-appliance-container">
-      <div className="air-condition-container">
+      <motion.div
+        initial={{ height: "100%" }}
+        // animate={{ opacity: 1 }}
+        // transition={{ opacity: { ease: "linear" }, layout: { duration: 0.3 } }}
+        className="air-condition-container"
+      >
         <AirConditioner />
-      </div>
+      </motion.div>
       <div className="light-container">
         <LightSettingPanel />
       </div>

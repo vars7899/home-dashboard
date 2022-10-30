@@ -5,10 +5,11 @@ import IconTextButton from "../../../Button/IconTextButton/IconTextButton.compon
 import { TbWind } from "react-icons/tb";
 import { MdOutlineThermostatAuto } from "react-icons/md";
 import { FaRegSnowflake } from "react-icons/fa";
+import { VscSettings } from "react-icons/vsc";
 import { GiHeatHaze, GiStrikingArrows } from "react-icons/gi";
 import "./ModeFunction.style.css";
 
-const ModeFunction = () => {
+const ModeFunction = ({ showMoreFunction, setShowMoreFunction }) => {
   const { acControls, setAcControls } = AppState();
   // Function to update the climate control mode
   function updateAcMode(event) {
@@ -81,6 +82,15 @@ const ModeFunction = () => {
             size={25}
             color={acControls.swing ? dark1 : accent2}
           />
+        </IconTextButton>
+      </div>
+      <div onClick={() => setShowMoreFunction((controls) => !controls)}>
+        <IconTextButton
+          givenText={"Settings"}
+          givenBackground={showMoreFunction ? accent2 : dark1}
+          textColor={showMoreFunction ? dark1 : accent2}
+        >
+          <VscSettings size={25} color={showMoreFunction ? dark1 : accent2} />
         </IconTextButton>
       </div>
     </div>

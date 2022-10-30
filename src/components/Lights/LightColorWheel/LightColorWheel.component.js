@@ -26,7 +26,7 @@ const LightColorWheel = () => {
       <ColorPicker
         {...colorWheel}
         onInput={onInput}
-        style={{ height: "290px", width: "290px" }}
+        style={{ height: "260px", width: "260px" }}
       />
     </div>
   );

@@ -32,7 +32,7 @@ const MarkerMark = () => {
             position: "absolute",
             left: "50%",
             transform: `rotate(${index * 5}deg)`,
-            transformOrigin: "0px 145px",
+            transformOrigin: "0px 130px",
             background: `hsl(${
               accent1H - acControls.temperature * 7
             },${accent1S}%,${accent1L}%)`,

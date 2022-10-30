@@ -1,5 +1,6 @@
 .ic-btn {
   cursor: pointer;
+  user-select: none;
 }
 .ic-btn-text {
   margin-bottom: 10px;

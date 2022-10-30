@@ -6,6 +6,7 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [roomList, setRoomList] = useState(ROOMData);
   const [selectedZone, setSelectedZone] = useState(1);
+  const [acFunction, setAcFunction] = useState(true);
   const [acControls, setAcControls] = useState({
     fan: true,
     fanSpeed: 7,
@@ -49,6 +50,8 @@ export const AppContextProvider = ({ children }) => {
         setUserColorPalette,
         colorWheel,
         setColorWheel,
+        setAcFunction,
+        acFunction,
       }}
     >
       {children}

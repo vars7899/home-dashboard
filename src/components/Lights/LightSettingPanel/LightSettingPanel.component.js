@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import LightColorWheel from "../LightColorWheel/LightColorWheel.component";
 import {
   accent2,
   accent2Light2,
-  dark1,
   dark2,
+  dark1,
+  accent1,
 } from "../../../styles/ColorScheme";
 import "./LightSettingPanel.style.css";
 import { MdOutlineContentCopy } from "react-icons/md";
@@ -14,6 +15,7 @@ import ColorButton from "../../Button/ColorButton/ColorButton.component";
 import IconButton from "../../Button/IconButton/IconButton.component";
 import { IoAdd } from "react-icons/io5";
 import RangeSlider from "../../Button/RangeSlider/RangeSlider.component";
+import { VscSettings } from "react-icons/vsc";
 
 const LightSettingPanel = () => {
   const {
@@ -25,6 +27,7 @@ const LightSettingPanel = () => {
     setUserColorPalette,
   } = AppState();
   const currentColor = useRef();
+  const [showSetting, setShowSetting] = useState(false);
 
   // Function --> Copies current selected color
   function handleCopy() {
@@ -70,6 +73,14 @@ const LightSettingPanel = () => {
           Ambient Light
         </div>
         <div className="lsp-header-btn">
+          <div
+            className="setting"
+            onClick={() => {
+              setShowSetting((prev) => !prev);
+            }}
+          >
+            <VscSettings size={25} color={showSetting ? accent1 : accent2} />
+          </div>
           <SwitchButton
             status={ambientLight}
             handleChange={() => setAmbientLight((current) => !current)}
@@ -106,63 +117,69 @@ const LightSettingPanel = () => {
                   <MdOutlineContentCopy size={20} color={accent2} />
                 </div>
               </div>
-              <p
-                className="lsp-header-text md-text bold"
-                style={{ color: accent2 }}
-              >
-                Hue
-              </p>
-              <div className="lsp-main-setting-box">
-                <RangeSlider
-                  givenValue={colorWheel.hue}
-                  givenMin={0}
-                  givenMax={360}
-                  givenType="hue"
-                />
-              </div>
-              <p
-                className="lsp-header-text md-text bold"
-                style={{ color: accent2 }}
-              >
-                Saturation
-              </p>
-              <div className="lsp-main-setting-box">
-                <RangeSlider
-                  givenValue={colorWheel.saturation}
-                  givenMin={0}
-                  givenMax={100}
-                  givenType="saturation"
-                />
-              </div>
-              <p
-                className="lsp-header-text md-text bold"
-                style={{ color: accent2 }}
-              >
-                Luminosity
-              </p>
-              <div className="lsp-main-setting-box">
-                <RangeSlider
-                  givenValue={colorWheel.luminosity}
-                  givenMin={0}
-                  givenMax={100}
-                  givenType="luminosity"
-                />
-              </div>
-              <p
-                className="lsp-header-text md-text bold"
-                style={{ color: accent2 }}
-              >
-                Alpha
-              </p>
-              <div className="lsp-main-setting-box">
-                <RangeSlider
-                  givenValue={colorWheel.alpha}
-                  givenMin={0}
-                  givenMax={1}
-                  givenStep={0.1}
-                  givenType="alpha"
-                />
-              </div>
+
+              {showSetting && (
+                <>
+                  {" "}
+                  <p
+                    className="lsp-header-text md-text bold"
+                    style={{ color: accent2 }}
+                  >
+                    Hue
+                  </p>
+                  <div className="lsp-main-setting-box">
+                    <RangeSlider
+                      givenValue={colorWheel.hue}
+                      givenMin={0}
+                      givenMax={360}
+                      givenType="hue"
+                    />
+                  </div>
+                  <p
+                    className="lsp-header-text md-text bold"
+                    style={{ color: accent2 }}
+                  >
+                    Saturation
+                  </p>
+                  <div className="lsp-main-setting-box">
+                    <RangeSlider
+                      givenValue={colorWheel.saturation}
+                      givenMin={0}
+                      givenMax={100}
+                      givenType="saturation"
+                    />
+                  </div>
+                  <p
+                    className="lsp-header-text md-text bold"
+                    style={{ color: accent2 }}
+                  >
+                    Luminosity
+                  </p>
+                  <div className="lsp-main-setting-box">
+                    <RangeSlider
+                      givenValue={colorWheel.luminosity}
+                      givenMin={0}
+                      givenMax={100}
+                      givenType="luminosity"
+                    />
+                  </div>
+                  <p
+                    className="lsp-header-text md-text bold"
+                    style={{ color: accent2 }}
+                  >
+                    Alpha
+                  </p>
+                  <div className="lsp-main-setting-box">
+                    <RangeSlider
+                      givenValue={colorWheel.alpha}
+                      givenMin={0}
+                      givenMax={1}
+                      givenStep={0.1}
+                      givenType="alpha"
+                    />
+                  </div>{" "}
+                </>
+              )}
             </div>
           </div>
           <div className="lsp-main-color">

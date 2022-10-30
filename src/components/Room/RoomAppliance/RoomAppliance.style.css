@@ -3,13 +3,17 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "ra ac" "ra li";
+  grid-template-rows: auto;
+  grid-template-areas: "ra ac" "ra ac" "ra li" "ra li";
   grid-gap: 10px;
+  max-height: 100%;
 }
 .room-appliance {
   grid-area: ra;
   width: 100%;
+  max-height: 767px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .room-appliance-cluster {
   width: 100%;
