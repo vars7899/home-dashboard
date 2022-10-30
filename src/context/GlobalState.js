@@ -34,6 +34,8 @@ export const AppContextProvider = ({ children }) => {
     luminosity: 50,
     alpha: 1,
   });
+  // 0 --> grid and 1 --> list
+  const [listType, setListType] = useState(false);
 
   return (
     <AppContext.Provider
@@ -52,6 +54,8 @@ export const AppContextProvider = ({ children }) => {
         setColorWheel,
         setAcFunction,
         acFunction,
+        listType,
+        setListType,
       }}
     >
       {children}

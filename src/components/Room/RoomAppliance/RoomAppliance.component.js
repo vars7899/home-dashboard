@@ -8,7 +8,7 @@ import LightSettingPanel from "../../Lights/LightSettingPanel/LightSettingPanel.
 import "./RoomAppliance.style.css";
 
 const RoomAppliance = () => {
-  const { selectedZone } = AppState();
+  const { selectedZone, listType } = AppState();
   return (
     <div className="room-appliance-container">
       <motion.div
@@ -29,6 +29,16 @@ const RoomAppliance = () => {
               <div
                 key={`current-room-active-${index}`}
                 className="room-appliance-cluster"
+                style={
+                  listType
+                    ? {
+                        gridTemplateColumns: "1fr",
+                      }
+                    : {
+                        gridTemplateColumns:
+                          "repeat(auto-fit, minmax(350px, 1fr))",
+                      }
+                }
               >
                 {roomName?.appliance.map((item, index) => {
                   return (
