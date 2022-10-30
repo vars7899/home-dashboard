@@ -63,7 +63,7 @@ const HumidityFunction = () => {
         backgroundColor: dark1,
       }}
     >
-      <div
+      <motion.div
         className="humidity-function-left-icon"
         onClick={() =>
           setAcControls((control) => ({
@@ -79,7 +79,7 @@ const HumidityFunction = () => {
             color={acControls.moister ? dark1 : accent2Light2}
           />
         </IconButton>
-      </div>
+      </motion.div>
 
       <div
         className="humidity-function-right-text threeXl-text"

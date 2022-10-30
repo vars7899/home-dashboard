@@ -10,7 +10,7 @@ import ModeFunction from "./ModeFunction/ModeFunction.component";
 
 const AirConditioner = () => {
   const { acControls } = AppState();
-  console.log(acControls.moister);
+
   return (
     <div className="ac-container" style={{ background: dark2 }}>
       <div className="ac-container-header">

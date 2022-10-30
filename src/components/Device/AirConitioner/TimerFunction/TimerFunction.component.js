@@ -52,7 +52,7 @@ const TimerFunction = () => {
       }
     }
   }
-  console.log(acControls.timerTime);
+
   return (
     <div
       className="timer-function"
@@ -60,7 +60,7 @@ const TimerFunction = () => {
         backgroundColor: dark1,
       }}
     >
-      <div
+      <motion.div
         className="timer-function-left-icon"
         onClick={() =>
           setAcControls((control) => ({
@@ -76,7 +76,7 @@ const TimerFunction = () => {
             color={acControls.timer ? dark1 : accent2Light2}
           />
         </IconButton>
-      </div>
+      </motion.div>
 
       <div
         className="timer-function-right-text threeXl-text"

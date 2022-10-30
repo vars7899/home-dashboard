@@ -12,7 +12,6 @@ const RangeSlider = ({
   givenStep = 1,
 }) => {
   const { setColorWheel } = AppState();
-  console.log(givenType);
   return (
     <div style={{ width: "100%" }}>
       <Slider

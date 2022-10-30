@@ -22,11 +22,10 @@ export const AppContextProvider = ({ children }) => {
   });
   const [ambientLight, setAmbientLight] = useState(false);
   const [userColorPalette, setUserColorPalette] = useState([
-    "#FFCF99",
-    "#2EC4B6",
-    "#E71D36",
-    "#011627",
-    "#FF9F1C",
+    { alpha: 1, hue: 43.80650611935693, luminosity: 50, saturation: 100 },
+    { hue: 343.35688968341026, saturation: 100, luminosity: 50, alpha: 1 },
+    { hue: 101.10574310498565, saturation: 100, luminosity: 50, alpha: 1 },
+    { hue: 183.19247300028272, saturation: 100, luminosity: 50, alpha: 1 },
   ]);
   const [colorWheel, setColorWheel] = useState({
     hue: 90,

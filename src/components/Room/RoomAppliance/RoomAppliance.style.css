@@ -1,13 +1,17 @@
 .room-appliance-container {
+  margin-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "ra ac" "ra li";
+  grid-gap: 10px;
 }
 .room-appliance {
+  grid-area: ra;
   width: 100%;
 }
 .room-appliance-cluster {
-  padding: 20px 0px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -15,6 +19,8 @@
   grid-gap: 10px;
 }
 .air-condition-container {
-  padding: 20px 0px;
-  margin-right: 10px;
+  grid-area: ac;
+}
+.light-container {
+  grid-area: li;
 }

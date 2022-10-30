@@ -4,6 +4,7 @@ import { ROOMData } from "../../../Data/ROOM";
 import AirConditioner from "../../Device/AirConitioner/AirConditoner.component";
 import DeviceCard from "../../Device/DeviceCard/DeviceCard.component";
 import SmallDeviceCard from "../../Device/SmallDeviceCard/SmallDeviceCard.component";
+import LightSettingPanel from "../../Lights/LightSettingPanel/LightSettingPanel.component";
 import "./RoomAppliance.style.css";
 
 const RoomAppliance = () => {
@@ -12,6 +13,9 @@ const RoomAppliance = () => {
     <div className="room-appliance-container">
       <div className="air-condition-container">
         <AirConditioner />
+      </div>
+      <div className="light-container">
+        <LightSettingPanel />
       </div>
       <div className="room-appliance">
         {ROOMData.filter((currentID) => currentID._id === selectedZone).map(

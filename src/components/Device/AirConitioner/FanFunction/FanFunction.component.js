@@ -61,7 +61,7 @@ const FanFunction = () => {
         backgroundColor: dark1,
       }}
     >
-      <div
+      <motion.div
         className="fan-function-left-icon"
         onClick={() =>
           setAcControls((control) => ({
@@ -77,7 +77,7 @@ const FanFunction = () => {
             color={acControls.fan ? dark1 : accent2Light2}
           />
         </IconButton>
-      </div>
+      </motion.div>
 
       <div className="fan-function-right-text">
         <div className="humidity-bars">

@@ -5,7 +5,6 @@ import { accent1, accent2Light1 } from "../../../styles/ColorScheme";
 import RoomHeader from "../../Room/RoomHeader/RoomHeader.component";
 import "./DeviceContainer.style.css";
 import RoomAppliance from "../../Room/RoomAppliance/RoomAppliance.component";
-import LightSettingPanel from "../../Lights/LightSettingPanel/LightSettingPanel.component";
 
 const DeviceContainer = () => {
   return (
@@ -28,7 +27,6 @@ const DeviceContainer = () => {
           <RoomHeader />
         </div>
         <RoomAppliance />
-        <LightSettingPanel />
       </div>
     </div>
   );

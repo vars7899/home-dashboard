@@ -27,6 +27,7 @@ const MarkerMark = () => {
       {limitArray.map((item, index) => (
         <div
           className="marker-mark"
+          key={`marker-mark-${index}`}
           style={{
             position: "absolute",
             left: "50%",
